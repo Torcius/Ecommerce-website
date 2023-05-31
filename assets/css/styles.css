@@ -15,6 +15,7 @@
     width: 100%;
     height: 800px;
     background-position: center;
+    z-index: 0;
 }
 
 .overlay {
@@ -25,6 +26,7 @@
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 
 /* Header (logo, navmenu 1 and 2) */
@@ -46,7 +48,8 @@
         flex-flow: row nowrap;
         list-style: none;
         width: 100%;
-        justify-content: space-around;    
+        justify-content: space-between;
+        align-items: center;
     }
 
     & a {
@@ -56,7 +59,41 @@
     }
 }
 
-.navmenu2 {
+.navover {
+    /* position: fixed;
+    top: 0px;
+    left: 0px; */
+    box-sizing: border-box;
+    width: 100%;
+    height:821px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+
+    > ul {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 25%;
+    }
+
+& a {
+    font-family: Poppins, sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    }
+
+    & li {
+        font-family: Poppins, sans-serif;
+    }
+}
+
+#navmenu2 {
     width: 100.55px;
     height: fit-content;
     display: flex;
@@ -68,6 +105,10 @@
         color: #ffffff;
         font-size: 24px;
         text-decoration: none;
+    }
+    
+    & span:hover {
+    cursor: pointer;
     }
 }
 
@@ -83,6 +124,7 @@
     left:auto;
     top:33%;
     background-color: rgba(255, 255, 255, 0.8);
+    z-index: 2;
 }
 
 .newprdct {
@@ -109,7 +151,7 @@
         flex-flow: column nowrap;
     }
 
-    .navmenu2 {
+    #navmenu2 {
         flex-flow:row nowrap;
     }
 
@@ -129,10 +171,14 @@ No changes necessary so far.
     }
     
     .navmenu1 {
-        display:flex;
+        display: flex;
     }
 
-    .navmenu2 {
-        width:120px;
+    #navmenu2 {
+        width: 80px;
+    }
+
+    #navmenu2 > :last-child {
+        display: none;
     }
 }

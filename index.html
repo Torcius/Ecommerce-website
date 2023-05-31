@@ -10,19 +10,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/products.css">
-    <link rel="Javascript" href="./assets/js/script.js">
+    <!-- <link rel="Javascript" href="./assets/js/script.js"> -->
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
     <script src="https://kit.fontawesome.com/0a347eb7a1.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <!--Hero section-->
+    <div class="navover">
+        <ul>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+            <li onclick="hidemenu()">Close</li>
+        </ul>
+    </div>
+
     <section class="hero">
+        
     <div class="overlay">
         <header class="header">
             <a href="./index.html">
                 <img class="site-logo" src="./assets/img/logo2.webp" alt="Site Logo">
             </a>
 
+<!-- overlay -->
             <nav class="navmenu1">
                 <ul>
                     <li><a href="#">Portfolio</a></li>
@@ -31,16 +44,16 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-
-            <nav class="navmenu2">
+            <nav id="navmenu2">
                 <a href="">
                     <i class="fa-regular fa-user"></i>
                 </a>
                 <a href="">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
-                <a href="">
-                    <i class="fa-solid fa-bars"></i>
+                <a> <span onclick="showmenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
                 </a>
             </nav>
         </header>
@@ -50,5 +63,14 @@
         </div>
     </div>
     </section>
+    <script>
+        function showmenu() {
+            document.getElementsByClassName("navover").style.display = "flex";
+        }
+
+        function hidemenu() {
+            document.getElementsByClassName("navover").style.display = "none";
+        }
+    </script>
 </body>
 </html>
