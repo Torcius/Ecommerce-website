@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="./assets/css/products.css">
     <!-- <link rel="Javascript" href="./assets/js/script.js"> -->
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
-    <script src="https://kit.fontawesome.com/0a347eb7a1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     
 </head>
 <body>
     <!--Hero section-->
+    
     <section class="hero">
         
     <div class="overlay">
@@ -36,15 +37,14 @@
             </nav>
             <nav id="navmenu2">
                 <a href="">
-                    <i class="fa-regular fa-user"></i>
+                    <i data-feather="user"></i>
                 </a>
                 <a href="">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i data-feather="shopping-cart"></i>
                 </a>
-                <a> <span onclick="showmenu()">
-                        <i class="fa-solid fa-bars"></i>
-                    </span>
-                </a>
+                <span onclick="showMenu()">
+                        <i data-feather="menu"></i>
+                </span>
             </nav>
         </header>
         <div class="hero-content">
@@ -52,25 +52,25 @@
             <a class="shoplnk" href="#">SHOP NOW</a>
         </div>
     </div>
-
-    <div class="navover">
+    <div id="navover">
         <ul>
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Shop</a></li>
             <li><a href="#">Contact</a></li>
-            <li onclick="hidemenu()">Close</li>
+            <li onclick="hideMenu()"><i data-feather="arrow-left-circle"></i></li>
         </ul>
     </div>
 
     </section>
     <script>
-        function showmenu() {
-            document.getElementsByClassName("navover").style.display = "flex";
+        feather.replace()
+        function showMenu() {
+            document.getElementById("navover").style.display = "flex";
         }
 
-        function hidemenu() {
-            document.getElementsByClassName("navover").style.display = "none";
+        function hideMenu() {
+            document.getElementById("navover").style.display = "none";
         }
     </script>
 </body>

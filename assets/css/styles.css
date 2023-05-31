@@ -6,6 +6,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: Poppins, sans-serif;
 }
 
 /* Hero section- Mobile view*/
@@ -53,13 +54,12 @@
     }
 
     & a {
-    font-family: Poppins, sans-serif;
     color: #ffffff;
     text-decoration: none;
     }
 }
 
-.navover {
+#navover {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -69,7 +69,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     display: none;
     flex-flow: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     float: top;
     z-index: 3;
@@ -81,16 +81,14 @@
     justify-content: space-between;
     align-items: center;
     height: 25%;
+    position: relative;
+    top: 100px;
     }
 
-& a {
+    & a, li {
     font-family: Poppins, sans-serif;
     color: #ffffff;
     text-decoration: none;
-    }
-
-    & li {
-        font-family: Poppins, sans-serif;
     }
 }
 
@@ -102,14 +100,10 @@
     align-items: center;
     justify-content: space-between;
     
-    & a {
+    & a, span {
         color: #ffffff;
         font-size: 24px;
         text-decoration: none;
-    }
-    
-    & span:hover {
-    cursor: pointer;
     }
 }
 
@@ -129,7 +123,6 @@
 }
 
 .newprdct {
-    font-family: Poppins, sans-serif;
     font-size: 33px;
     font-weight: 300;
     text-align: center;
