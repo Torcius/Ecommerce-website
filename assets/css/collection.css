@@ -4,7 +4,6 @@
     flex-flow: row wrap;
     width: 100vw;
 }
-
 /* Properties common to both new collection divs */
 .new {
     width: 100%;
@@ -41,16 +40,30 @@
 .baskets {
     background-image: url('../img/bask.jpg');
 }
-
-/* Tablet view for collection */
+/* Tablet view */
 @media (min-width: 760px) {
-    .new {
-        width: 44%;
-        margin: 0;
-    }
-    
     .collection {
         margin: 3% 0;
         justify-content: space-evenly;
+
+        .new {
+            width: 44%;
+            margin: 0;
+        }
+    }
+}
+/* Desktop View */
+@media (min-width: 900px) {
+    .collection {
+        padding: 0 30px;
+        justify-content: space-between;
+    
+        .new {
+            width: 48%;
+        
+            .newcollection {
+                width: 100%;
+            }
+        }
     }
 }
