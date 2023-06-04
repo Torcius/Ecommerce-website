@@ -1,0 +1,56 @@
+/* Entire section */
+.collection {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100vw;
+}
+
+/* Properties common to both new collection divs */
+.new {
+    width: 100%;
+    min-width: fit-content;
+    height: 24vh;
+    min-height: 128px;
+    margin: 3%;
+    padding: 0 4.65vw;
+    background: center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* New collection headers */
+.newcollection {
+    width: 50%;
+    font-size: 22px;
+    text-transform: capitalize;
+    text-align: start;
+}
+
+.em-dash {
+    font-size: 26px;
+    font-weight: 300;
+    position: relative;
+    top: 6px;
+}
+
+.furniture {
+    background-image: url('../img/furn.jpg');
+}
+
+.baskets {
+    background-image: url('../img/bask.jpg');
+}
+
+/* Tablet view for collection */
+@media (min-width: 760px) {
+    .new {
+        width: 44%;
+        margin: 0;
+    }
+    
+    .collection {
+        margin: 3% 0;
+        justify-content: space-evenly;
+    }
+}

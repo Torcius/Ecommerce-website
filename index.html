@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>T-Mart | E-commerce Website</title>
+    <title>T-Mart | Quality & Affordability</title>
     <meta name="author" content="Yaw Owusu Afriyie Boateng">
     <meta name="keywords" content="HTML, CSS, Javascript, Azubi, Front-end, shop, e-commerce, T-Mart, Tmart">
     <meta name="description" content="Azubi Front-end Developer Project">
@@ -9,68 +9,139 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/hero.css">
+    <link rel="stylesheet" href="./assets/css/collection.css">
     <link rel="stylesheet" href="./assets/css/products.css">
-    <!-- <link rel="Javascript" href="./assets/js/script.js"> -->
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    
 </head>
 <body>
     <!--Hero section-->
-    
-    <section class="hero">
-        
-    <div class="overlay">
-        <header class="header">
-            <a href="./index.html">
-                <img class="site-logo" src="./assets/img/logo2.webp" alt="Site Logo">
-            </a>
-
-<!-- overlay -->
-            <nav class="navmenu1">
-                <ul>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <nav id="navmenu2">
-                <a href="">
-                    <i data-feather="user"></i>
-                </a>
-                <a href="">
-                    <i data-feather="shopping-cart"></i>
-                </a>
-                <span onclick="showMenu()">
-                        <i data-feather="menu"></i>
-                </span>
-            </nav>
-        </header>
+    <section class="hero-bg">
         <div class="hero-content">
-            <p class="newprdct">New Product Collection</p>
-            <a class="shoplnk" href="#">SHOP NOW</a>
+            <header class="header">
+                <a href="./index.html"><img class="site-logo" src="./assets/img/logo_white.png" alt="Site Logo"></a>
+                <nav class="navmenu">
+                    <ul>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="navicons">
+                    <a href=""><i data-feather="user"></i></a>
+                    <a href=""><i data-feather="shopping-cart"></i></a>
+                    <span id="menu-icon" onclick="showMenu()"><i data-feather="menu"></i></span>
+                </nav>
+            </header>
+            <div class="hero-message">
+                <p class="msg-header">new product collection</p>
+                <a class="lineunderlink" href="#">shop now</a>
+            </div>
         </div>
-    </div>
-    <div id="navover">
-        <ul>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Contact</a></li>
-            <li onclick="hideMenu()"><i data-feather="arrow-left-circle"></i></li>
-        </ul>
-    </div>
-
+        <!-- Overlay menu that displays when menu bar is tapped (for mobile and tablet views) -->
+        <div id="hidden-menu">
+            <ul>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+                <li onclick="hideMenu()"><i data-feather="arrow-left-circle"></i></li>
+            </ul>
+        </div>
     </section>
+    <!-- New Collection Section -->
+    <section class="collection">
+        <!--New furniture div-->
+        <div class="new furniture">
+            <h2 class="newcollection">new furniture collection</h2>
+            <div>
+                <a class="lineunderlink" href="#">shop now</a>
+                <span class="em-dash"><i data-feather="minus"></i></span>
+            </div>
+        </div>
+        <!--New baskets div-->
+        <div class="new baskets">
+            <h2 class="newcollection">new baskets collection</h2>
+            <div>
+                <a class="lineunderlink href="#">shop now</a>
+                <span class="em-dash"><i data-feather="minus"></i></span>
+            </div>
+        </div>
+    </section>
+    <!-- Best products section -->
+    <div class="msg-header-div">
+        <h2 class="msg-header"> best products</h2>
+    </div>
+        <!--Products-->
+    <section class="products">
+        <div class="box1 product">
+            <div class="box">
+                <p>christopher knight furniture</p>
+                <br>
+                <p>$ 235.23</p>
+            </div>
+        </div>
+        <div class="box2 product">
+            <div class="box">
+                <p>wheat straw unbreakable cup</p>
+                <br>
+                <p>$ 67.15</p>
+            </div>            
+        </div>
+        <div class="box3 product">
+            <div class="box">
+                <p>adidas classic bag</p>
+                <br>
+                <p>$ 49.82</p>
+            </div>
+        </div>
+            <div class="box4 product">
+                <div class="box">
+                    <p>desk pencil - pen holder</p>
+                    <br>
+                    <p>$ 22.30</p>
+                </div>
+            </div>
+            <div class="box5 product">
+                <div class="box">
+                    <p>ripple creak key holder</p>
+                    <br>
+                    <p>$ 8.13</p>
+                </div>
+            </div>
+            <div class="box6 product">
+                <div class="box">
+                    <p>economical cotton canvas</p>
+                    <br>
+                    <p>$ 11.08</p>
+                </div>
+            </div>
+            <div class="box7 product">
+                <div class="box">
+                    <p>michael kors original</p>
+                    <br>
+                    <p>$ 15.10</p>
+                </div>
+            </div>
+
+            <div class="box8 product">
+                <div class="box">
+                    <p>bostanten women leather</p>
+                    <br>
+                    <p>$ 234.26</p>
+                </div>
+            </div>
+    </section>
+    <!-- Javascript codes for feather icons and Overlay Menu -->
     <script>
         feather.replace()
         function showMenu() {
-            document.getElementById("navover").style.display = "flex";
+            document.getElementById("hidden-menu").style.display = "flex";
         }
-
         function hideMenu() {
-            document.getElementById("navover").style.display = "none";
+            document.getElementById("hidden-menu").style.display = "none";
         }
     </script>
 </body>
